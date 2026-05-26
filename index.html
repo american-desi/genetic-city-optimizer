@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Genetic City Optimizer</title>
+<meta name="description" content="Multi-objective evolutionary search for urban layouts that minimize commute, maximize green, and balance noise.">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{ --bg:#0a0a0f; --fg:#f5f4f0; --muted:#8a8a92; --accent:#ff6b35; --accent2:#4ecdc4; --card:#13131a; --border:rgba(255,255,255,0.08); }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html,body{background:var(--bg);color:var(--fg);font:16px/1.6 'Inter Tight',system-ui,sans-serif;min-height:100vh}
+  body::before{content:'';position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.5;
+    background:radial-gradient(ellipse at 18% 22%,rgba(255,107,53,.16),transparent 55%),
+               radial-gradient(ellipse at 82% 76%,rgba(78,205,196,.12),transparent 55%),
+               radial-gradient(ellipse at 50% 50%,rgba(155,89,182,.08),transparent 70%);
+    filter:blur(50px);}
+  .wrap{position:relative;z-index:1;max-width:1100px;margin:0 auto;padding:60px 32px 100px}
+  header{margin-bottom:60px}
+  .kind{display:inline-block;font:500 11px/1 'JetBrains Mono',monospace;letter-spacing:.18em;
+    padding:7px 11px;border-radius:4px;margin-bottom:28px;text-transform:uppercase;
+    background:rgba(255,107,53,.08);color:#ff8a5b;border:1px solid rgba(255,107,53,.22)}
+  h1{font:400 clamp(2.5rem,7vw,5rem)/1.05 'Instrument Serif',serif;letter-spacing:-.02em;margin-bottom:20px;
+    background:linear-gradient(135deg,#fff 30%,#bbb 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .tagline{font:400 clamp(1.15rem,2.3vw,1.5rem)/1.4 'Instrument Serif',serif;font-style:italic;color:#b5b5bd;margin-bottom:36px;max-width:760px}
+  .actions{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:6px;
+    font:500 14px 'Inter Tight',sans-serif;text-decoration:none;transition:all .18s;border:1px solid transparent}
+  .btn.primary{background:var(--accent);color:#0a0a0f}
+  .btn.primary:hover{background:#ff8050;transform:translateY(-1px)}
+  .btn.ghost{background:transparent;color:var(--fg);border-color:var(--border)}
+  .btn.ghost:hover{background:var(--card);border-color:rgba(255,255,255,.2)}
+  .content{display:grid;grid-template-columns:1fr;gap:32px;margin-top:48px}
+  @media(min-width:880px){.content{grid-template-columns:1.45fr 1fr}}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:32px}
+  .card h2{font:500 12px 'JetBrains Mono',monospace;letter-spacing:.18em;color:var(--accent2);
+    text-transform:uppercase;margin-bottom:18px}
+  .card p{color:#d0d0d8;margin-bottom:14px;line-height:1.75}
+  .card p:last-child{margin-bottom:0}
+  .meta div{font:13px 'JetBrains Mono',monospace;color:var(--muted);padding:10px 0;border-bottom:1px solid var(--border)}
+  .meta div:last-child{border:none}
+  .meta strong{color:var(--fg);font-weight:500}
+  .gallery{margin-top:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+  .gallery a{display:block;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:#fff}
+  .gallery img{display:block;width:100%;height:auto}
+  footer{margin-top:80px;padding-top:32px;border-top:1px solid var(--border);
+    color:var(--muted);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer a{color:var(--accent2);text-decoration:none}
+  footer a:hover{text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="kind">Python · Optimization</span>
+    <h1>Genetic City Optimizer</h1>
+    <p class="tagline">Multi-objective evolutionary search for urban layouts that minimize commute, maximize green, and balance noise.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://github.com/american-desi/genetic-city-optimizer">View on GitHub →</a>
+      <a class="btn ghost" href="https://github.com/american-desi/genetic-city-optimizer#readme">Documentation</a>
+    </div>
+  </header>
+  <div class="content">
+    <div class="card">
+      <h2>About</h2>
+      <p>A <strong>multi-objective genetic algorithm</strong> optimizing city layouts on a 30×30 grid. Balances competing goals: minimizing commute distance, maximizing green space access, ensuring service coverage, managing noise and pollution.</p>
+<p>Run for a few thousand generations and watch a city emerge from random noise into something that looks plausible — sometimes beautiful.</p>
+    </div>
+    <div class="card meta">
+      <h2>Repository</h2>
+      <div><strong>Owner:</strong> american-desi</div>
+      <div><strong>Repo:</strong> genetic-city-optimizer</div>
+      <div><strong>Type:</strong> Python · Optimization</div>
+      <div><strong>License:</strong> MIT</div>
+    </div>
+  </div>
+  <div class="gallery"><a href="city_before_after.png" target="_blank"><img src="city_before_after.png" alt="city_before_after.png"></a><a href="fitness_evolution.png" target="_blank"><img src="fitness_evolution.png" alt="fitness_evolution.png"></a><a href="pareto_front.png" target="_blank"><img src="pareto_front.png" alt="pareto_front.png"></a><a href="zone_heatmaps.png" target="_blank"><img src="zone_heatmaps.png" alt="zone_heatmaps.png"></a></div>
+  <footer>
+    <span>Built by Josh Thomas</span>
+    <span><a href="https://github.com/american-desi">@american-desi</a></span>
+  </footer>
+</div>
+</body>
+</html>

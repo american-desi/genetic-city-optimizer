@@ -1,0 +1,57 @@
+# OS
+.DS_Store
+Thumbs.db
+# Editor
+.idea/
+.vscode/
+*.swp
+# Env (NEVER commit secrets)
+.env
+.env.local
+.env.*.local
+*.pem
+# Deps
+node_modules/
+.pnp/
+.pnp.js
+# Build artifacts
+dist/
+build/
+out/
+.next/
+.nuxt/
+.cache/
+.parcel-cache/
+.turbo/
+.svelte-kit/
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+.venv/
+.pytest_cache/
+.coverage
+htmlcov/
+.ipynb_checkpoints/
+# Xcode
+*.xcuserstate
+xcuserdata/
+DerivedData/
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+# Internal
+.cowork/
+.claude/
